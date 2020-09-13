@@ -4,6 +4,19 @@
   
     
     <entry>
+      <title>数学公式测试</title>
+      <link href="/2020/09/04/%E6%95%B0%E5%AD%A6%E5%85%AC%E5%BC%8F%E6%B5%8B%E8%AF%95/"/>
+      <url>/2020/09/04/%E6%95%B0%E5%AD%A6%E5%85%AC%E5%BC%8F%E6%B5%8B%E8%AF%95/</url>
+      
+        <content type="html"><![CDATA[<p>数学公式大全</p><script type="math/tex; mode=display">\begin{aligned}\operatorname{Im}\left(i \partial_{t} \psi, \psi\right) &=\operatorname{Re}\left(\partial_{t} \psi, \psi\right) \quad(i(a+i b)=-b+i a) \\&=\operatorname{Re} \int_{\Omega} \frac{\partial \psi}{\psi} \bar{\psi} d x \\&=\frac{1}{2} \operatorname{Re} \int_{\Omega}\left(\frac{\partial \psi}{\partial t} \bar{\psi}+\frac{\partial \bar{\psi}}{\partial t} \psi\right) d x \\&=\frac{1}{2} \frac{d}{d t} \int_{\Omega}|\psi|^{2} d x \\&=\frac{1}{2} \frac{d}{d t}\|\psi(\cdot, t)\|_{L^{2}}^{2}\end{aligned}</script>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>基于Gitee和Hexo搭建博客学习</title>
       <link href="/2020/09/03/%E5%9F%BA%E4%BA%8EGitee%E5%92%8CHexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E5%AD%A6%E4%B9%A0/"/>
       <url>/2020/09/03/%E5%9F%BA%E4%BA%8EGitee%E5%92%8CHexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E5%AD%A6%E4%B9%A0/</url>
