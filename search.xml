@@ -202,6 +202,21 @@
       </tags>
   </entry>
   <entry>
+    <title>距离空间，线性空间，赋范线性空间，Banach空间，内积空间，Hilbert空间内在关系分析</title>
+    <url>/2020/11/18/%E8%B7%9D%E7%A6%BB%E7%A9%BA%E9%97%B4%EF%BC%8C%E7%BA%BF%E6%80%A7%E7%A9%BA%E9%97%B4%EF%BC%8C%E8%B5%8B%E8%8C%83%E7%BA%BF%E6%80%A7%E7%A9%BA%E9%97%B4%EF%BC%8CBanach%E7%A9%BA%E9%97%B4%EF%BC%8C%E5%86%85%E7%A7%AF%E7%A9%BA%E9%97%B4%EF%BC%8CHilbert%E7%A9%BA%E9%97%B4%E5%86%85%E5%9C%A8%E5%85%B3%E7%B3%BB%E5%88%86%E6%9E%90/</url>
+    <content><![CDATA[<h1 id="距离空间，线性空间，赋范线性空间，-Banach-空间，内积空间，-Hilbert-空间内在关系分析"><a href="#距离空间，线性空间，赋范线性空间，-Banach-空间，内积空间，-Hilbert-空间内在关系分析" class="headerlink" title="距离空间，线性空间，赋范线性空间，$Banach$ 空间，内积空间，$Hilbert$ 空间内在关系分析"></a><font face=STSong>距离空间，线性空间，赋范线性空间，$Banach$ 空间，内积空间，$Hilbert$ 空间内在关系分析</font></h1><h5 id="先来看一下五类空间的定义"><a href="#先来看一下五类空间的定义" class="headerlink" title="先来看一下五类空间的定义"></a><font face=STSong>先来看一下五类空间的定义</font></h5><p><font face=STSong>1.(距离空间) 设$X$是某些元素组成的集合。如果对任意$x,y \in X$，按照一定的法则确定一个非负实数$d(x,y)$，且满足：</font><br>            <font face=STSong>(1)非负性：$d(x,y) \ge 0$，且$d(x,y) = 0 \Longleftrightarrow x=y$；</font><br>            <font face=STSong>(2)对称性：$d(x,y)=d(y,x)$；</font><br>            <font face=STSong>(3)三角不等式：$\forall x,y,z \in X$，有$d(x,y) \le d(x,z)+d(z,y)$；</font><br><font face=STSong>满足上述条件的二元实函数$d( · , · ): X \times X \to R^{1} $叫作$X$上的距离，$X$称为距离空间。  </font><br><font face=STSong>（注：在一个距离空间(即满足三条公理)中，如果它的每一个基本列都收敛(即每个基本列都收敛)，则成为完备的距离空间）。 </font>  </p>
+<a id="more"></a>
+
+<p><font face=STSong>2.(线性赋范空间) 设$X$是实数域(或复数域)$\Lambda$上的线性空间。在$X$上定义映射$X \to R^{1}: x \to \Arrowvert · \Arrowvert$。若$\forall x,y \in X, \alpha \in \Lambda$满足： </font><br>            <font face=STSong>(1)正定性：$\Arrowvert x \Arrowvert \ge 0 \Longleftrightarrow x=0$，</font><br>            <font face=STSong>(2)正齐性：$\Arrowvert \alpha x \Arrowvert = \arrowvert \alpha \arrowvert \Arrowvert x \Arrowvert$；</font><br>            <font face=STSong>(3)三角不等式：$\Arrowvert x+y \Arrowvert \le \Arrowvert x \Arrowvert + \Arrowvert y \Arrowvert$；</font><br><font face=STSong>则称$\Arrowvert x \Arrowvert$为$x$的范数，称$(X, \Arrowvert · \Arrowvert)$为线性赋范空间</font>  </p>
+<p><font face=STSong>3.(Banach空间) 设$X$是一线性赋范空间。如果$X$按照距离$d(x,y)=\Arrowvert x-y \Arrowvert$是完备的，则称X为巴拿赫空间。</font></p>
+<p><font face=STSong>4.(内积空间) 设$U$是是数域$\Lambda$上的线性空间。定义映射$U \times U \to \Lambda$，对任何$x,y,z \in U, \alpha \in \Lambda$，满足：</font><br>            <font face=STSong>(1)线性性质：$(x+y,z)=(x,z)+(y,z)$；</font><br>            <font face=STSong>(2)线性性质：$(\alpha x,z) = \alpha (x,z)$；</font><br>            <font face=STSong>(3)复共轭：$(x,y)= \overline{(y,x)}$；</font><br>            <font face=STSong>(4)$(x,x) \ge 0,(x,x)=0 \Longleftrightarrow x=0$；</font><br><font face=STSong>则称$(x,y)$为$x,y$的内积，定义了内积的线性空间$U$称为内积空间。</font>  </p>
+<p><font face=STSong>5.(Hilbert空间) 设$U$是内积空间，若$U$按照由内积导出的范数$\Arrowvert x \Arrowvert = {(x,x)}^{1 \over 2}$成为Banach空间，就称$U$是Hilbert空间，即为$H$。</font>  </p>
+<h5 id="就上述的定义画出五个空间之间的内在联系"><a href="#就上述的定义画出五个空间之间的内在联系" class="headerlink" title="就上述的定义画出五个空间之间的内在联系"></a><font face=STSong>就上述的定义画出五个空间之间的内在联系</font></h5><img src="https://gitee.com/zhangweixiaogege/myblogimage/raw/master/img/image-20201119110342513.png" alt="image-20201119110342513" style="zoom: 67%;" />]]></content>
+      <tags>
+        <tag>应用泛函分析; 空间</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>英语六级作文(个人准备)</title>
     <url>/2020/09/15/%E8%8B%B1%E8%AF%AD%E5%85%AD%E7%BA%A7%E4%BD%9C%E6%96%87/</url>
     <content><![CDATA[<h2 id="基本只考议论文！"><a href="#基本只考议论文！" class="headerlink" title="基本只考议论文！"></a>基本只考议论文！</h2><h3 id="话题类型："><a href="#话题类型：" class="headerlink" title="话题类型："></a>话题类型：</h3><ol>
@@ -255,21 +270,6 @@
 ]]></content>
       <tags>
         <tag>英语六级；作文</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>距离空间，线性空间，赋范线性空间，Banach空间，内积空间，Hilbert空间内在关系分析</title>
-    <url>/2020/11/18/%E8%B7%9D%E7%A6%BB%E7%A9%BA%E9%97%B4%EF%BC%8C%E7%BA%BF%E6%80%A7%E7%A9%BA%E9%97%B4%EF%BC%8C%E8%B5%8B%E8%8C%83%E7%BA%BF%E6%80%A7%E7%A9%BA%E9%97%B4%EF%BC%8CBanach%E7%A9%BA%E9%97%B4%EF%BC%8C%E5%86%85%E7%A7%AF%E7%A9%BA%E9%97%B4%EF%BC%8CHilbert%E7%A9%BA%E9%97%B4%E5%86%85%E5%9C%A8%E5%85%B3%E7%B3%BB%E5%88%86%E6%9E%90/</url>
-    <content><![CDATA[<h1 id="距离空间，线性空间，赋范线性空间，-Banach-空间，内积空间，-Hilbert-空间内在关系分析"><a href="#距离空间，线性空间，赋范线性空间，-Banach-空间，内积空间，-Hilbert-空间内在关系分析" class="headerlink" title="距离空间，线性空间，赋范线性空间，$Banach$ 空间，内积空间，$Hilbert$ 空间内在关系分析"></a><font face=STSong>距离空间，线性空间，赋范线性空间，$Banach$ 空间，内积空间，$Hilbert$ 空间内在关系分析</font></h1><h5 id="先来看一下五类空间的定义"><a href="#先来看一下五类空间的定义" class="headerlink" title="先来看一下五类空间的定义"></a><font face=STSong>先来看一下五类空间的定义</font></h5><p><font face=STSong>1.(距离空间) 设$X$是某些元素组成的集合。如果对任意$x,y \in X$，按照一定的法则确定一个非负实数$d(x,y)$，且满足：</font><br>            <font face=STSong>(1)非负性：$d(x,y) \ge 0$，且$d(x,y) = 0 \Longleftrightarrow x=y$；</font><br>            <font face=STSong>(2)对称性：$d(x,y)=d(y,x)$；</font><br>            <font face=STSong>(3)三角不等式：$\forall x,y,z \in X$，有$d(x,y) \le d(x,z)+d(z,y)$；</font><br><font face=STSong>满足上述条件的二元实函数$d( · , · ): X \times X \to R^{1} $叫作$X$上的距离，$X$称为距离空间。  </font><br><font face=STSong>（注：在一个距离空间(即满足三条公理)中，如果它的每一个基本列都收敛(即每个基本列都收敛)，则成为完备的距离空间）。 </font>  </p>
-<a id="more"></a>
-
-<p><font face=STSong>2.(线性赋范空间) 设$X$是实数域(或复数域)$\Lambda$上的线性空间。在$X$上定义映射$X \to R^{1}: x \to \Arrowvert · \Arrowvert$。若$\forall x,y \in X, \alpha \in \Lambda$满足： </font><br>            <font face=STSong>(1)正定性：$\Arrowvert x \Arrowvert \ge 0 \Longleftrightarrow x=0$，</font><br>            <font face=STSong>(2)正齐性：$\Arrowvert \alpha x \Arrowvert = \arrowvert \alpha \arrowvert \Arrowvert x \Arrowvert$；</font><br>            <font face=STSong>(3)三角不等式：$\Arrowvert x+y \Arrowvert \le \Arrowvert x \Arrowvert + \Arrowvert y \Arrowvert$；</font><br><font face=STSong>则称$\Arrowvert x \Arrowvert$为$x$的范数，称$(X, \Arrowvert · \Arrowvert)$为线性赋范空间</font>  </p>
-<p><font face=STSong>3.(Banach空间) 设$X$是一线性赋范空间。如果$X$按照距离$d(x,y)=\Arrowvert x-y \Arrowvert$是完备的，则称X为巴拿赫空间。</font></p>
-<p><font face=STSong>4.(内积空间) 设$U$是是数域$\Lambda$上的线性空间。定义映射$U \times U \to \Lambda$，对任何$x,y,z \in U, \alpha \in \Lambda$，满足：</font><br>            <font face=STSong>(1)线性性质：$(x+y,z)=(x,z)+(y,z)$；</font><br>            <font face=STSong>(2)线性性质：$(\alpha x,z) = \alpha (x,z)$；</font><br>            <font face=STSong>(3)复共轭：$(x,y)= \overline{(y,x)}$；</font><br>            <font face=STSong>(4)$(x,x) \ge 0,(x,x)=0 \Longleftrightarrow x=0$；</font><br><font face=STSong>则称$(x,y)$为$x,y$的内积，定义了内积的线性空间$U$称为内积空间。</font>  </p>
-<p><font face=STSong>5.(Hilbert空间) 设$U$是内积空间，若$U$按照由内积导出的范数$\Arrowvert x \Arrowvert = {(x,x)}^{1 \over 2}$成为Banach空间，就称$U$是Hilbert空间，即为$H$。</font>  </p>
-<h5 id="就上述的定义画出五个空间之间的内在联系"><a href="#就上述的定义画出五个空间之间的内在联系" class="headerlink" title="就上述的定义画出五个空间之间的内在联系"></a><font face=STSong>就上述的定义画出五个空间之间的内在联系</font></h5><img src="https://gitee.com/zhangweixiaogege/myblogimage/raw/master/img/image-20201119110342513.png" alt="image-20201119110342513" style="zoom: 67%;" />]]></content>
-      <tags>
-        <tag>应用泛函分析; 空间</tag>
       </tags>
   </entry>
   <entry>
