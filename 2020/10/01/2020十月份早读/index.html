@@ -496,23 +496,25 @@
 
   
 
-      <div id="gitalk-container"></div>
+       <div id="gitalk-container"></div>
+       <div id="gitalk-container" style="padding: 0px 30px 0px 30px;"></div> 
+
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
 <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
-<script src="https://cdn.bootcss.com/blueimp-md5/2.10.0/js/md5.js"></script>
+<script type="text/javascript">
 
-<script>
-var gitalk = new Gitalk({
-  clientID: '',
-  clientSecret: '',
-  repo: 'blog_comments',
-  owner: '',
-  admin: [''],
-  id: md5(window.location.pathname),
-  distractionFreeMode: true
+if(true){
+	var gitalk = new Gitalk({
+  	clientID: '8525e87037439eef8a69',
+  	clientSecret: 'efe38c61950a6a739915e302eabbd3cd7b937b18',
+  	repo: 'blog_comments',
+  	owner: 'zhangwei12345679',
+  	admin: ['[&#39;仓库名&#39;,&#39;仓库名&#39;]'],
+  	id: 'Thu Oct 01 2020 09:00:14 GMT+0800',
+  	distractionFreeMode: 'true'
 })
-
-gitalk.render('gitalk-container')
+gitalk.render('gitalk-container') 
+}
 </script>
   
 
@@ -636,11 +638,11 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">应用泛函分析; 空间</a>
+                <a href="javascript:void(0)" class="js-tag color3">英语六级；作文</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">英语六级；作文</a>
+                <a href="javascript:void(0)" class="js-tag color1">应用泛函分析; 空间</a>
               </li>
             
             <div class="clearfix"></div>
