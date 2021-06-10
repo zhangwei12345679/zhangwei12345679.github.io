@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.1.1">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Mist","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="1. Blog搭建分享 创建一个自定义博客，既方便于知识的积累，又可以加以分享。对于个人自己搭建一个博客框架来说可能成本较高，但是也是有免费的方式的。本人采用gitee page(https:&#x2F;&#x2F;gitee.com&#x2F;)搭建免费的个人静态博客，当然我更倾心于github page的方式，但是奈何由于国外的github page访问速度慢且不稳定，转用国内开源代码托管平台gitee(码云)。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="硕士在读(工具篇)">
+<meta property="og:url" content="http://example.com/2021/04/09/%E7%A1%95%E5%A3%AB%E5%9C%A8%E8%AF%BB-%E5%B7%A5%E5%85%B7%E7%AF%87/index.html">
+<meta property="og:site_name" content="ZhangWeiのBlog">
+<meta property="og:description" content="1. Blog搭建分享 创建一个自定义博客，既方便于知识的积累，又可以加以分享。对于个人自己搭建一个博客框架来说可能成本较高，但是也是有免费的方式的。本人采用gitee page(https:&#x2F;&#x2F;gitee.com&#x2F;)搭建免费的个人静态博客，当然我更倾心于github page的方式，但是奈何由于国外的github page访问速度慢且不稳定，转用国内开源代码托管平台gitee(码云)。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="c:/Users/哒哒的张伟/AppData/Roaming/Typora/typora-user-images/image-20210609171105711.png">
+<meta property="og:image" content="c:/Users/哒哒的张伟/AppData/Roaming/Typora/typora-user-images/image-20210609191335581.png">
+<meta property="og:image" content="c:/Users/哒哒的张伟/AppData/Roaming/Typora/typora-user-images/image-20210609191823260.png">
+<meta property="og:image" content="c:/Users/哒哒的张伟/AppData/Roaming/Typora/typora-user-images/image-20210609194249643.png">
+<meta property="og:image" content="c:/Users/哒哒的张伟/AppData/Roaming/Typora/typora-user-images/image-20210609195908818.png">
+<meta property="og:image" content="c:/Users/哒哒的张伟/AppData/Roaming/Typora/typora-user-images/image-20210609200218592.png">
+<meta property="article:published_time" content="2021-04-09T07:44:14.000Z">
+<meta property="article:modified_time" content="2021-06-09T12:27:23.719Z">
+<meta property="article:author" content="zhangwei">
+<meta property="article:tag" content="好用的小工具">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="c:/Users/哒哒的张伟/AppData/Roaming/Typora/typora-user-images/image-20210609171105711.png">
+
+<link rel="canonical" href="http://example.com/2021/04/09/%E7%A1%95%E5%A3%AB%E5%9C%A8%E8%AF%BB-%E5%B7%A5%E5%85%B7%E7%AF%87/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>硕士在读(工具篇) | ZhangWeiのBlog</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">ZhangWeiのBlog</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">A little effort every day, you will make a big difference.</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/04/09/%E7%A1%95%E5%A3%AB%E5%9C%A8%E8%AF%BB-%E5%B7%A5%E5%85%B7%E7%AF%87/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/mylogo.jpg">
+      <meta itemprop="name" content="zhangwei">
+      <meta itemprop="description" content="别忘了飞">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ZhangWeiのBlog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          硕士在读(工具篇)
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-04-09 15:44:14" itemprop="dateCreated datePublished" datetime="2021-04-09T15:44:14+08:00">2021-04-09</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-06-09 20:27:23" itemprop="dateModified" datetime="2021-06-09T20:27:23+08:00">2021-06-09</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h1 id="1-Blog搭建分享"><a href="#1-Blog搭建分享" class="headerlink" title="1. Blog搭建分享"></a><font face="微软雅黑" color=#8A2BE2>1. Blog搭建分享</font></h1><blockquote>
+<p><font face=STKaiti>创建一个自定义博客，既方便于知识的积累，又可以加以分享。对于个人自己搭建一个博客框架来说可能成本较高，但是也是有免费的方式的。本人采用gitee page(https://gitee.com/)搭建免费的个人静态博客，当然我更倾心于github page的方式，但是奈何由于国外的github page访问速度慢且不稳定，转用国内开源代码托管平台gitee(码云)。</font>   </p>
+</blockquote>
+<blockquote>
+<p><font face=STKaiti>个人也是根据网上的教程一步步搭建了一个初步的博客模型，我选择使用的是gitee和hexo进行搭建，对博客并未进行深层次的美化，有兴趣的小伙伴可以自行研究啊。下面就push几个教程给大家。</font>   </p>
+</blockquote>
+<blockquote>
+<p><font face=STKaiti><a target="_blank" rel="noopener" href="https://segmentfault.com/a/1190000018662692" title="基于 Gitee+Hexo 搭建个人博客">基于 Gitee+Hexo 搭建个人博客</a></font><br><font face=STKaiti><a target="_blank" rel="noopener" href="https://bainingchao.github.io/2018/09/19/Hexo-GitHub%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B/" title="Hexo-GitHub 搭建个人博客配置教程">Hexo-GitHub 搭建个人博客配置教程</a></font><br><font face=STKaiti><a target="_blank" rel="noopener" href="http://yearito.cn/posts/hexo-theme-beautify.html" title="Hexo 搭建个人博客系列：主题美化篇">Hexo 搭建个人博客系列：主题美化篇</a></font>   </p>
+</blockquote>
+<blockquote>
+<p><font face=STKaiti>跟着教程走就能搭建出属于自己的Blog啦！！！我写文章的markdown语法工具是<a target="_blank" rel="noopener" href="https://www.typora.io/" title="Typora">Typora</a>。</font><br><font face=STKaiti>当你搭建好自己的博客的时候，这时候必要的事图片的引用，这是我们需要结合gitee仓库和<a target="_blank" rel="noopener" href="https://github.com/Molunerfinn/PicGo/releases" title="PicGo">PicGo</a>打造自己的<a target="_blank" rel="noopener" href="https://github.com/Molunerfinn/PicGo/releases" title="图床">图床</a>，mac 系统选择.dmg下载，windwos 选择.exe 系统。</font>  </p>
+</blockquote>
+<a id="more"></a>  
+
+
+
+<h1 id="2-英文文献搜索与下载"><a href="#2-英文文献搜索与下载" class="headerlink" title="2. 英文文献搜索与下载"></a><font face="微软雅黑" color=#8A2BE2>2. 英文文献搜索与下载</font></h1><blockquote>
+<p><font face=STKaiti>读文献是科研的第一步，中文文献在读的学生都能搞定，下面安利一下英文文献的下载方法。</font>  </p>
+</blockquote>
+<blockquote>
+<p><font face=STKaiti><a target="_blank" rel="noopener" href="http://www.4243.net/" title="大木虫学术导航">《大木虫学术导航》</a>，这是一个宝藏网站，类似一个科研文献资源库，自行探索。</font>  </p>
+</blockquote>
+<blockquote>
+<p><font face=STKaiti>我自己常用的就是将<a target="_blank" rel="noopener" href="https://sc.panda321.com/" title="熊猫学术">《熊猫学术》</a>和<a target="_blank" rel="noopener" href="http://www.sci-hub.wang/" title="SCI-HUB">《SCI-HUB》</a>联用，对于95%的英文文献都可以轻松解决。以”machine learning”为关键词进行检索，部分右侧点击可以获取PDF版文献，部分没有的话我们点击进去搜寻文章的DOI号并利用<a target="_blank" rel="noopener" href="http://www.sci-hub.wang/" title="SCI-HUB">《SCI-HUB》</a>进行下载。</font>  </p>
+</blockquote>
+<img src="C:\Users\哒哒的张伟\AppData\Roaming\Typora\typora-user-images\image-20210609171105711.png" alt="image-20210609171105711" style="zoom: 25%;" />
+
+<blockquote>
+<p><font face=STKaiti>点击对应文章下面的的 ”号就可以获取对文献的引用格式了。</font>  </p>
+</blockquote>
+<h1 id="2-访问谷歌"><a href="#2-访问谷歌" class="headerlink" title="2. 访问谷歌"></a><font face="微软雅黑" color=#8A2BE2>2. 访问谷歌</font></h1><blockquote>
+<p><font face=STKaiti>不吹不黑，谷歌搜索引擎天下第一，搜索效率奇高，好的搜索引擎真的是很省搜索资源的时间。</font>  </p>
+</blockquote>
+<blockquote>
+<p><font face=STKaiti>1. <a target="_blank" rel="noopener" href="https://pan.baidu.com/s/1zfMDzovnwZoGbEYIIZ0P8Q" title="谷歌访问助手">《谷歌访问助手》</a>，百度云提取码65gw。需要开启浏览器的的拓展程序，解压拖进去crx文件就好。时好时坏，有时候不好使。</font>  </p>
+</blockquote>
+<blockquote>
+<p><font face=STKaiti>2. <a target="_blank" rel="noopener" href="https://siguso.com/google/" title="谷歌学术镜像">《谷歌学术镜像》</a>，里面有五个镜像搜索，有时不稳定，多尝试尝试，总会有好用的。</font>  </p>
+</blockquote>
+<h1 id="3-便笺"><a href="#3-便笺" class="headerlink" title="3. 便笺"></a><font face="微软雅黑" color=#8A2BE2>3. 便笺</font></h1><blockquote>
+<p><font face=STKaiti>Windows10的便笺真的是很好用的一个小笔记便签，可以安排一下日计划、周计划、月计划、年计划，做一些小笔记都是极好的。</font>  </p>
+</blockquote>
+<img src="C:\Users\哒哒的张伟\AppData\Roaming\Typora\typora-user-images\image-20210609191335581.png" alt="image-20210609191335581" style="zoom:25%;" />
+
+
+
+
+<h1 id="4-PPT模板"><a href="#4-PPT模板" class="headerlink" title="4. PPT模板"></a><font face="微软雅黑" color=#8A2BE2>4. PPT模板</font></h1><blockquote>
+<p><font face=STKaiti><a target="_blank" rel="noopener" href="https://www.ypppt.com/?tdsourcetag=s_pcqq_aiomsg" title="优品PPT">《优品PPT》</a>，研究生必不可少的组会汇报，必不可少的PPT制作，优品PPT提供海量免费PPT模板。</font>  </p>
+</blockquote>
+<img src="C:\Users\哒哒的张伟\AppData\Roaming\Typora\typora-user-images\image-20210609191823260.png" alt="image-20210609191823260" style="zoom:25%;" />
+
+
+
+
+<h1 id="5-文献管理工具Zotero"><a href="#5-文献管理工具Zotero" class="headerlink" title="5. 文献管理工具Zotero"></a><font face="微软雅黑" color=#8A2BE2>5. 文献管理工具Zotero</font></h1><blockquote>
+<p><font face=STKaiti><a target="_blank" rel="noopener" href="https://www.zotero.org/" title="Zotero">《Zotero》</a>，很好用的文献管理工具，配合<a target="_blank" rel="noopener" href="https://chrome.google.com//" title="chrome应用商店">《chrome应用商店》</a>中的Zotero Connector插件一起使用。</font>  </p>
+</blockquote>
+<img src="C:\Users\哒哒的张伟\AppData\Roaming\Typora\typora-user-images\image-20210609194249643.png" alt="image-20210609194249643" style="zoom:25%;" />
+
+<blockquote>
+<p><font face=STKaiti>下载好Zotero Connector浏览器插件，再配和<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/137753335/" title="Zotero的设置">Zotero的设置</a>，我们就能轻松的管理文献了。</font>  </p>
+</blockquote>
+<blockquote>
+<p><font face=STKaiti>当然，当你能够访问chrome应用商店，你肯定也会发现许多有趣又实用的浏览器小插件。</font>  </p>
+</blockquote>
+<h1 id="6-公式识别神器mathpix-snipping-tool"><a href="#6-公式识别神器mathpix-snipping-tool" class="headerlink" title="6. 公式识别神器mathpix snipping tool"></a><font face="微软雅黑" color=#8A2BE2>6. 公式识别神器mathpix snipping tool</font></h1><blockquote>
+<p><font face=STKaiti><a target="_blank" rel="noopener" href="https://mathpix.com/" title="mathpix snipping tool">《mathpix snipping tool》</a>，如果平时的科研工具需要输入大量的公式，这个公式识别配合上mathtype就能轻松完成公式的输入。</font>  </p>
+</blockquote>
+<img src="C:\Users\哒哒的张伟\AppData\Roaming\Typora\typora-user-images\image-20210609195908818.png" alt="image-20210609195908818" style="zoom:33%;" />
+
+<blockquote>
+<p><font face=STKaiti>mathpix识别出的是latex代码，需将mathtype打开设置如下，将代码复制进入公式编辑器即可。</font>  </p>
+</blockquote>
+<img src="C:\Users\哒哒的张伟\AppData\Roaming\Typora\typora-user-images\image-20210609200218592.png" alt="image-20210609200218592" style="zoom: 33%;" />
+
+
+
+
+
+<h1 id="8-PPT素材库"><a href="#8-PPT素材库" class="headerlink" title="8. PPT素材库"></a><font face="微软雅黑" color=#8A2BE2>8. PPT素材库</font></h1><blockquote>
+<p><font face=STKaiti>推荐三个图标、图片素材库，可以用来作为PPT素材，也可以作为壁纸选择和图片欣赏。</font><br><font face=STKaiti><a target="_blank" rel="noopener" href="https://www.iconfont.cn/" title="阿里巴巴矢量图标库">阿里巴巴矢量图标库</a></font><br><font face=STKaiti><a target="_blank" rel="noopener" href="https://pixabay.com/zh/" title="pixabay">pixabay</a></font><br><font face=STKaiti><a target="_blank" rel="noopener" href="https://www.pexels.com/zh-cn/" title="pexels">pexels</a></font>  </p>
+</blockquote>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E5%A5%BD%E7%94%A8%E7%9A%84%E5%B0%8F%E5%B7%A5%E5%85%B7/" rel="tag"># 好用的小工具</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2021/04/01/%E4%BA%8C0%E4%BA%8C%E4%B8%80%E5%9B%9B%E6%9C%88%E4%BB%BD%E6%97%A9%E8%AF%BB/" rel="prev" title="二0二一四月份早读">
+      <i class="fa fa-chevron-left"></i> 二0二一四月份早读
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2021/05/01/%E4%BA%8CO%E4%BA%8C%E4%B8%80%E4%BA%94%E6%9C%88%E4%BB%BD%E6%97%A9%E8%AF%BB/" rel="next" title="二0二一五月份早读">
+      二0二一五月份早读 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-Blog%E6%90%AD%E5%BB%BA%E5%88%86%E4%BA%AB"><span class="nav-number">1.</span> <span class="nav-text">1. Blog搭建分享</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-%E8%8B%B1%E6%96%87%E6%96%87%E7%8C%AE%E6%90%9C%E7%B4%A2%E4%B8%8E%E4%B8%8B%E8%BD%BD"><span class="nav-number">2.</span> <span class="nav-text">2. 英文文献搜索与下载</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-%E8%AE%BF%E9%97%AE%E8%B0%B7%E6%AD%8C"><span class="nav-number">3.</span> <span class="nav-text">2. 访问谷歌</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3-%E4%BE%BF%E7%AC%BA"><span class="nav-number">4.</span> <span class="nav-text">3. 便笺</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-PPT%E6%A8%A1%E6%9D%BF"><span class="nav-number">5.</span> <span class="nav-text">4. PPT模板</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#5-%E6%96%87%E7%8C%AE%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7Zotero"><span class="nav-number">6.</span> <span class="nav-text">5. 文献管理工具Zotero</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#6-%E5%85%AC%E5%BC%8F%E8%AF%86%E5%88%AB%E7%A5%9E%E5%99%A8mathpix-snipping-tool"><span class="nav-number">7.</span> <span class="nav-text">6. 公式识别神器mathpix snipping tool</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#8-PPT%E7%B4%A0%E6%9D%90%E5%BA%93"><span class="nav-number">8.</span> <span class="nav-text">8. PPT素材库</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="zhangwei"
+      src="/images/mylogo.jpg">
+  <p class="site-author-name" itemprop="name">zhangwei</p>
+  <div class="site-description" itemprop="description">别忘了飞</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">14</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">5</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">zhangwei</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://mist.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Mist</a> 强力驱动
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/muse.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+</body>
+</html>
