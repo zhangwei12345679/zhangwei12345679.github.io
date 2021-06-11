@@ -52,10 +52,11 @@
 <body>
   <div id="container" q-class="show:isCtnShow">
     <canvas id="anm-canvas" class="anm-canvas"></canvas>
-    <div class="left-col" q-class="show:isShow">
+    <div class="left-col" q-class="show:isShow"  style="background: https://gitee.com/zhangweixiaogege/myblogimage/raw/master/img/image-20210611173813736.png no-repeat 100%;background-size:cover;opacity:0.8;filter:alpha(opacity=80);">
       
-<div class="overlay" style="background: #4d4d4d"></div>
-<div class="intrude-less">
+<!-- <div class="overlay" style="background: rgba(0,0,0,0.5)"> -->
+<!-- 左侧边栏（上半部分）不设置背景颜色 -->
+<div class="overlay" >
 	<header id="header" class="inner">
 		<a href="/" class="profilepic">
 			<img src="/assets/zhangwei.jpg" class="js-avatar">
@@ -122,7 +123,7 @@
     <div class="mid-col" q-class="show:isShow,hide:isShow|isFalse">
       
 <nav id="mobile-nav">
-  	<div class="overlay js-overlay" style="background: #4d4d4d"></div>
+  	<div class="overlay js-overlay" style="background: rgba(0,0,0,0.5)"></div>
 	<div class="btnctn js-mobile-btnctn">
   		<div class="slider-trigger list" q-on="click: openSlider(e)"><i class="icon icon-sort"></i></div>
 	</div>
@@ -614,14 +615,6 @@ MathJax.Hub.Queue(function() {
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">诗歌</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">阅读</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">读者</a>
               </li>
              
@@ -634,15 +627,23 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">诗歌</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">阅读</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">TeacherGwen英语早读</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">好用的小工具</a>
+                <a href="javascript:void(0)" class="js-tag color3">英语六级；作文</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">英语六级；作文</a>
+                <a href="javascript:void(0)" class="js-tag color2">好用的小工具</a>
               </li>
              
               <li class="article-tag-list-item">
