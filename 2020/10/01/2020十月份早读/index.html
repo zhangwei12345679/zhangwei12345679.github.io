@@ -583,25 +583,28 @@
   
   
   
-  
-  <div class="gitalk">
-    <div id="gitalk-container"></div>
-    <script type="text/javascript">
-        const gitalk = new Gitalk({
-            clientID: '',
-            clientSecret: '',
-            repo: 'blog_comments',
-            owner: '',
-            admin: [''],
-            id: location.pathname,      // Ensure uniqueness and length less than 50
-            distractionFreeMode: false  // Facebook-like distraction free mode
-        })
 
-        gitalk.render('gitalk-container')
-    </script>
-</div>
-  
 
+  <div id="gitalk-container" style="padding: 0px 30px 0px 30px;"></div> 
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+<script type="text/javascript">
+
+if(true){
+	var gitalk = new Gitalk({
+  	clientID: '8525e87037439eef8a69',
+  	clientSecret: 'f7d1aa05cbeb1c1900b5c464253ee733a4c80270',
+  	repo: 'blog_comments',
+  	owner: 'zhangwei12345679',
+  	admin: ['zhangwei12345679'],
+  	id: 'Thu Oct 01 2020 09:00:14 GMT+0800',
+  	distractionFreeMode: 'true'
+})
+gitalk.render('gitalk-container') 
+}
+</script>
+  
 
           </div>
         </div>
