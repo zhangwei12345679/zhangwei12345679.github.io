@@ -112,7 +112,7 @@
 
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css">
-// 这里div的样式是笔者自己修改过的，你可以直接使用APlayer官方的原配置：<div id="aplayer"></div>
+<div id="aplayer"></div>
 <div id="aplayer" style="position:absolute;left;0;bottom:0;"></div>
 <script src="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/color-thief-don@2.0.2/src/color-thief.js"></script>
@@ -129,21 +129,119 @@
     mutex: true, //互斥，阻止多个播放器同时播放，当前播放器播放时暂停其他播放器
     lrcType: 3, //歌词格式，可选值：3（LRC文件歌词格式），1（JS字符串歌词格式）
     volume: 0.7, //默认音量，请注意播放器会记忆用户设置，用户手动设置音量后默认音量即失效
-    fixed: false, //吸底模式（fixed:true），迷你模式（mini:true），普通模式（注释此行或者设置fixed:false）
+    fixed: true, //吸底模式（fixed:true），迷你模式（mini:true），普通模式（注释此行或者设置fixed:false）
     audio: [{
-        name: '平凡之路',
-        artist: '朴树',
-        lrc: '/downloads/lrc/平凡之路-朴树.lrc',
-        cover: 'http://p2.music.126.net/W_5XiCv3rGS1-J7EXpHSCQ==/18885211718782327.jpg?param=300x300',
-        url: 'http://fs.open.kugou.com/cd5cbe8edb012e4f77b0857cefc0956e/5c66accf/G097/M08/0A/1F/AYcBAFkQGpOAMUpuAEm-3SlWMyk951.mp3'
+        name: '世界美好与你环环相扣',
+        artist: '吕口口',
+        lrc: '/downloads/lrc/世界美好与你环环相扣-吕口口.lrc',
+        cover: 'http://p3.music.126.net/vh6ehS2Sw4FxQFrXIIrJcg==/109951164458146686.jpg?param=300x300',
+        url: 'http://music.163.com/song/media/outer/url?id=1399664349.mp3'
+      },
+	  {
+        name: 'いつも何度でも',
+        artist: '宗次郎',
+        lrc: '/downloads/lrc/いつも何度でも - 宗次郎.lrc',
+        cover: 'http://imge.kugou.com/stdmusic/150/20150720/20150720192351939143.jpg',
+        url: 'https://sharefs.yun.kugou.com/202106122144/c5727a68e536cac9e5b1f9bf4708731d/G205/M09/16/09/bYcBAF5x5zOAGFWsADB4BuyXd38817.mp3'
       },
       {
-        name: '后会无期',
-        artist: 'G.E.M.邓紫棋',
-        lrc: '/downloads/lrc/后会无期-G.E.M.邓紫棋.lrc',
-        cover: 'http://p1.music.126.net/vpvPajo3kn88nHc7jUjeWQ==/5974746185758035.jpg?param=300x300',
-        url: 'http://m10.music.126.net/20190215193113/e5afc8b5376136029366f2053cf30f85/ymusic/2c87/6ec3/582e/0d572dcc04f8de34133c0f364b74c30c.mp3'
-      }
+        name: 'Insomnia',
+        artist: 'Craig David',
+        lrc: '/downloads/lrc/Insomnia - Craig David.lrc',
+        cover: 'http://imge.kugou.com/stdmusic/150/20150718/20150718054939894952.jpg',
+        url: 'https://sharefs.yun.kugou.com/202106122149/449c46c52a9b71d385e91b45eeae0116/G196/M07/1E/00/ZIcBAF5ZUXKAHp4iADM2ZcDT9CA106.mp3'
+      },
+	  {
+        name: '逍遥叹',
+        artist: '胡歌',
+        lrc: '/downloads/lrc/逍遥叹 - 胡歌.lrc',
+        cover: 'http://imge.kugou.com/stdmusic/150/20200923/20200923140054512735.jpg',
+        url: 'https://sharefs.yun.kugou.com/202106122155/f5a4f2bd961986faee7e6a37e3f9077c/KGTX/CLTX001/1415e6eab8e8b0538f5fb66526c9eb65.mp3'
+      },
+	  {
+        name: '纯纯的夏天',
+        artist: 'LIKPIA',
+        lrc: '/downloads/lrc/纯纯的夏天 - LIKPIA.lrc',
+        cover: 'http://singerimg.kugou.com/uploadpic/softhead/150/20191115/20191115161114766.jpg',
+        url: 'https://sharefs.yun.kugou.com/202106122157/2ed2259d5d0180b228e52bbc0cb6dbe1/G229/M05/0C/01/xZQEAF8gIrKIB-wAAARHrrIhMU8AAAVdANAYxAABEfG268.wav'
+      },
+	  {
+        name: '宁夏',
+        artist: '梁静茹',
+        lrc: '/downloads/lrc/宁夏 - 梁静茹.lrc',
+        cover: 'http://imge.kugou.com/stdmusic/150/20150714/20150714134738851576.jpg',
+        url: 'https://sharefs.yun.kugou.com/202106122223/5799a488eed839830cadb3f3aa99c461/KGTX/CLTX001/1cb56a1c546912c8c0596a8ebe2c1d92.mp3'
+      },
+	  {
+        name: '一直很安静',
+        artist: '阿桑',
+        lrc: '/downloads/lrc/一直很安静 - 阿桑.lrc',
+        cover: 'http://imge.kugou.com/stdmusic/150/20171016/20171016101203221753.jpg',
+        url: 'https://sharefs.yun.kugou.com/202106122225/4500c0f9199b2541619fab36be2974b3/KGTX/CLTX001/d384fd185474591e025c54d3b6f17120.mp3'
+      },
+	  {
+        name: '侧脸',
+        artist: '于果',
+        lrc: '/downloads/lrc/侧脸 - 于果.lrc',
+        cover: 'http://imge.kugou.com/stdmusic/150/20180201/20180201121244302537.jpg',
+        url: 'https://sharefs.yun.kugou.com/202106122228/0433f6e656323c0ab240ebf5575bde55/KGTX/CLTX001/ceb612bbe5645e24e156c5a141f011df.mp3'
+      },
+	  {
+        name: '红色高跟鞋',
+        artist: '蔡健雅',
+        lrc: '/downloads/lrc/红色高跟鞋 - 蔡健雅.lrc',
+        cover: 'http://imge.kugou.com/stdmusic/150/20190118/20190118150246963220.jpg',
+        url: 'https://sharefs.yun.kugou.com/202106122235/a43f91941220452c045ed4bd21386d7b/G110/M07/0E/09/TpQEAFwuzVmAQuelADDSIYHUWDU813.mp3'
+      },
+	  {
+        name: 'See You Again',
+        artist: 'see you again',
+        lrc: '/downloads/lrc/See You Again - see you again.lrc',
+        cover: 'http://imge.kugou.com/stdmusic/150/20191219/20191219012500888593.jpg',
+        url: 'https://sharefs.yun.kugou.com/202106122239/a2d36373ff9241e4185060437c99d815/G178/M01/13/07/kpQEAF37LiqAKPgbADfGi9WEb1I796.mp3'
+      },
+	  {
+        name: '八三夭乐团',
+        artist: '想见你想见你想见你',
+        lrc: '/downloads/lrc/想见你想见你想见你 - 八三夭乐团.lrc',
+        cover: 'http://imge.kugou.com/stdmusic/150/20191114/20191114114810198400.jpg',
+        url: 'https://sharefs.yun.kugou.com/202106122253/5d733b4a7fba1410f099c580648d6d5a/G173/M05/02/11/TYcBAF3M1qSAFWcYADqP5boWKck516.mp3'
+      },
+	  {
+        name: '稻香',
+        artist: '田阿依',
+        lrc: '/downloads/lrc/稻香 - 田阿依.lrc',
+        cover: 'http://singerimg.kugou.com/uploadpic/softhead/150/20200501/20200501121044448285.jpg',
+        url: 'https://sharefs.yun.kugou.com/202106122244/f3fc6ecc6531d8a0721ce51ce2627b15/G223/M04/1A/01/Hw4DAF9fFlCAYeMGADaNDnOQAzM267.mp3'
+      },
+	  {
+        name: 'Someone You Loved',
+        artist: 'Adriana Vitale',
+        lrc: '/downloads/lrc/Someone You Loved - Adriana Vitale.lrc',
+        cover: 'http://imge.kugou.com/stdmusic/150/20200422/20200422185025777235.jpg',
+        url: 'https://sharefs.yun.kugou.com/202106122302/c02ed3b92f508feaa31364e2397da9ba/KGTX/CLTX001/c32bdb2e7eed04b5c4b6fdab1e6d6b0a.mp3'
+      },
+	  {
+        name: '飞鸟和蝉',
+        artist: '林俊杰',
+        lrc: '/downloads/lrc/飞鸟和蝉 - 林俊杰.lrc',
+        cover: 'http://singerimg.kugou.com/uploadpic/softhead/150/20210328/20210328211239904.jpg',
+        url: 'https://sharefs.yun.kugou.com/202106122252/932df2dfe9cb303b444e9cf3e1a6a00a/KGTX/CLTX001/6c98ae137798b00f537a2640690b104f.mp3'
+      },
+	  {
+        name: 'Señorita',
+        artist: 'Shawn Mendes',
+        lrc: '/downloads/lrc/Señorita - Shawn Mendes.lrc',
+        cover: 'http://imge.kugou.com/stdmusic/150/20190621/20190621114304588064.jpg',
+        url: 'https://sharefs.yun.kugou.com/202106122309/e05b1623a57cd85dc7646679f9c0d879/KGTX/CLTX001/81d18e8fab229b2b7475111e951ff7ea.mp3'
+      },
+	  {
+        name: 'MELANCHOLY',
+        artist: 'White Cherry',
+        lrc: '/downloads/lrc/MELANCHOLY - White Cherry.lrc',
+        cover: 'http://imge.kugou.com/stdmusic/150/20200909/20200909142956960417.jpg',
+        url: 'https://sharefs.yun.kugou.com/202106122312/b9ca8629fe3578154d2243c64ff8d62b/KGTX/CLTX001/01a8dbf28ac442533b709b4c730f8548.mp3'
+      },
     ]
   });
 
@@ -410,14 +508,6 @@ MathJax.Hub.Queue(function() {
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">诗歌</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">阅读</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">读者</a>
               </li>
              
@@ -430,6 +520,14 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">诗歌</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">阅读</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">TeacherGwen英语早读</a>
               </li>
              
@@ -438,11 +536,11 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">英语六级；作文</a>
+                <a href="javascript:void(0)" class="js-tag color1">应用泛函分析; 空间</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">应用泛函分析; 空间</a>
+                <a href="javascript:void(0)" class="js-tag color3">英语六级；作文</a>
               </li>
             
             <div class="clearfix"></div>
