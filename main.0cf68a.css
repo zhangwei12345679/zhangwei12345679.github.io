@@ -507,7 +507,7 @@ body {
     /* background-color:#fff; */
     min-height:100%;
     background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), 
-        url('D:/MyBlog/themes/yilia/source/assets006.jpeg') no-repeat 0% 0%/ cover;
+        url('./assets006.jpeg') no-repeat 0% 0%/ cover;
     /* 设置鼠标的图标 */
     cursor:url('https://oss.yansheng.xyz/ico/cursor.ico'), default;
 }
@@ -966,7 +966,7 @@ body {
 }
 .left-col {
     background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), 
-    url('D:/MyBlog/themes/yilia/source/assets006.jpeg') no-repeat 0% 20%/ cover;
+    url('./assets006.jpeg') no-repeat 0% 20%/ cover;
     width:300px;
     position:fixed;
     opacity:1;
