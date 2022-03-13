@@ -496,7 +496,7 @@
 
         
         <a href="/books/index.html" class="archive-article-date">
-  	<time datetime="2022-03-12T02:04:00.329Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-03-12</time>
+  	<time datetime="2022-03-13T01:41:52.869Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-03-13</time>
 </a>
         <!-- 开始添加字数统计-->
 		
@@ -2099,5 +2099,20 @@ MathJax.Hub.Queue(function() {
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.js"></script>
   <script type="text/javascript" src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
   <script type="text/javascript" src="/js/clipboard_use.js"></script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 </body>
 </html>
